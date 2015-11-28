@@ -13,7 +13,7 @@
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <title>CuSEr (Customer Smart Entertainer) by flori-barcan</title>
+    <title>CuSEr (Customer Smart Entertainer) by cristi-gafita</title>
   </head>
 
   <body>
@@ -21,7 +21,7 @@
       <div class="inner">
         <h1>CuSEr (Customer Smart Entertainer)</h1>
         <h2></h2>
-        <a href="https://github.com/flori-barcan/Cuser" class="button"><small>View project on</small> GitHub</a>
+        <a href="https://github.com/cristi-gafita/Cuser" class="button"><small>View project on</small> GitHub</a>
       </div>
     </header>
 
@@ -36,39 +36,107 @@
 <h1>
 <a id="technologies" class="anchor" href="#technologies" aria-hidden="true"><span class="octicon octicon-link"></span></a>Technologies</h1>
 
+<p>All the technologies used in this project are used in real-life application and are considered top of the line.The main technologies used are : </p>
+
+<ul>
+<li>
+<a href="https://angularjs.org/">AngularJs</a> </li>
+<li>
+<a href="http://www.asp.net/web-api">WebApi</a> </li>
+<li>
+<a href="http://www.dotnetrdf.org/">dotNetRDF</a> </li>
+<li>
+<a href="http://getbootstrap.com/">Bootstrap</a> </li>
+<li>
+<a href="http://lesscss.org/">Less</a> </li>
+<li>
+<a href="https://ro.wikipedia.org/wiki/HTML5">HTML5</a> </li>
+<li>
+<p><a href="https://msdn.microsoft.com/en-us/data/ef.aspx">Entity Framework</a></p>
+
+<p>The front-end is built in AngularJs using a multi-layered service architecture to be easily maintained and respect best practices.In order to easily implement themes in the application but also because it is a newer alternative than CSS less was chosen.The design of the project was built using the popular framework Bootstrap.
+The back-end is built using Microsoft technologies so the REST Api is implemented using WebApi, also to comunicate with the database Entity Framework was used.
+Taking into account that the project is built using mostly .NET technologies dotNetRDF was the obvious choice in order to easily work with RDF, SPARQL and the Semantic Web.</p>
+</li>
+</ul>
+
 <h1>
 <a id="architecture" class="anchor" href="#architecture" aria-hidden="true"><span class="octicon octicon-link"></span></a>Architecture</h1>
+
+<pre><code>The application has a multi-layered architecture on both the front-end and back-end.Both architecture obey best practices so that the code respects SOLID and REST principles and also that the code is easy to manage and maintain.
+</code></pre>
 
 <h2>
 <a id="front-end" class="anchor" href="#front-end" aria-hidden="true"><span class="octicon octicon-link"></span></a>Front-end</h2>
 
+<p><img src="https://cuser2015.files.wordpress.com/2015/11/arhitectura-front-end.png" alt="Front-End Architecture"></p>
+
+<pre><code>The front-end architecture consists of three layers of services as seen in the diagram above.The first service is the configuration service and it has only one responsibility, to provide URLs to the exposed methods of the WEB Api.The second layer consists of the synchronization service that makes the actual calls to the Web Api, this services takes the required url from the configuration service, gets the data from the entity services and makes the call to the web api.The third layer of services consists of multiple entity services, each entity having it's own service thus obeying the single responsibility principle, any processing of the data, that can be done on the front-end is done inside this service and not in the angular controllers or in the other services.
+</code></pre>
+
+<p>The angular controllers are as light as possible with as little logic as possible, where heavy logic is required directives are used.    </p>
+
 <h2>
 <a id="back-end" class="anchor" href="#back-end" aria-hidden="true"><span class="octicon octicon-link"></span></a>Back-end</h2>
+
+<p><img src="https://cuser2015.files.wordpress.com/2015/11/backenddiagram.png" alt="Back-End Architecture"></p>
+
+<p>The back-end is built around .NET technologies and has four layers.The first layer is represented by the actual database model (internal and external).The second layer is represented by the repositories, the next layer unifies the external and internal data,in here is where the most back-end logic lies as well.The final layer is represented by the WEB API controllers that expose services to the front-end.</p>
 
 <h3>
 <a id="web-api" class="anchor" href="#web-api" aria-hidden="true"><span class="octicon octicon-link"></span></a>Web API</h3>
 
+<p>The Web API is the final layer of the back-end and the layer that exposes data to the front-end.So far the controllers that are considered as needed are:</p>
+
+<ul>
+<li>Account</li>
+<li>User</li>
+<li>Restaurant</li>
+<li>Menu</li>
+<li>Recommendation</li>
+</ul>
+
+<p>More will be added once the actual implementation of the application begins.</p>
+
 <h3>
 <a id="internal-data-models" class="anchor" href="#internal-data-models" aria-hidden="true"><span class="octicon octicon-link"></span></a>Internal data models</h3>
+
+<p>The database used for internal data will be sql server.The data will be translated into models using entity framework.The models needed to implement this application are:</p>
+
+<ul>
+<li>Account</li>
+<li>User</li>
+<li>Restaurant</li>
+<li>Menu</li>
+<li>Dish</li>
+<li>Ingredient</li>
+<li>Recommendation</li>
+<li>Review</li>
+<li>Settings</li>
+</ul>
 
 <h3>
 <a id="external-data-sources" class="anchor" href="#external-data-sources" aria-hidden="true"><span class="octicon octicon-link"></span></a>External data sources</h3>
 
+<p>--Vlad Barbaru'</p>
+
 <h1>
 <a id="conclusion" class="anchor" href="#conclusion" aria-hidden="true"><span class="octicon octicon-link"></span></a>Conclusion</h1>
+
+<p>CuSEr is an application that uses the latest technologies and uses architectures that are used in real-life applications. Because no deprecated technologies were used continued support for these technologies is assured for many years to come.</p>
         </section>
 
         <aside id="sidebar">
-          <a href="https://github.com/flori-barcan/Cuser/zipball/master" class="button">
+          <a href="https://github.com/cristi-gafita/Cuser/zipball/master" class="button">
             <small>Download</small>
             .zip file
           </a>
-          <a href="https://github.com/flori-barcan/Cuser/tarball/master" class="button">
+          <a href="https://github.com/cristi-gafita/Cuser/tarball/master" class="button">
             <small>Download</small>
             .tar.gz file
           </a>
 
-          <p class="repo-owner"><a href="https://github.com/flori-barcan/Cuser"></a> is maintained by <a href="https://github.com/flori-barcan">flori-barcan</a>.</p>
+          <p class="repo-owner"><a href="https://github.com/cristi-gafita/Cuser"></a> is maintained by <a href="https://github.com/cristi-gafita">cristi-gafita</a>.</p>
 
           <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
         </aside>

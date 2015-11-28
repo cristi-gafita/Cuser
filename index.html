@@ -63,23 +63,20 @@ Taking into account that the project is built using mostly .NET technologies dot
 <h1>
 <a id="architecture" class="anchor" href="#architecture" aria-hidden="true"><span class="octicon octicon-link"></span></a>Architecture</h1>
 
-<pre><code>The application has a multi-layered architecture on both front-end and back-end.Both architectures obey best practices so that the code respects SOLID and REST principles and also that the code is easy to manage and maintain.
-</code></pre>
+<p>The application has a multi-layered architecture on both front-end and back-end.Both architectures obey best practices so that the code respects SOLID and REST principles and also that the code is easy to manage and maintain.</p>
 
 <h2>
 <a id="front-end" class="anchor" href="#front-end" aria-hidden="true"><span class="octicon octicon-link"></span></a>Front-end</h2>
 
-<p><img src="https://cuser2015.files.wordpress.com/2015/11/arhitectura-front-end.png" alt="Front-End Architecture">.</p>
+<p><img src="https://cuser2015.files.wordpress.com/2015/11/arhitectura-front-end.png" alt="Front-End Architecture"></p>
 
-<pre><code>The front-end architecture consists of three layers of services as seen in the diagram above.The first service is the configuration service and it has only one responsibility, to provide URLs to the exposed methods of the Web API. The second layer consists of the synchronization service that makes the actual calls to the Web API, this services takes the required url from the configuration service, gets the data from the entity services and makes the call to the Web API. The third layer of services consists of multiple entity services, each entity having it's own service thus obeying the single responsibility principle, any processing of the data, that can be done on the front-end is done inside this service and not in the angular controllers or in the other services.
-</code></pre>
-
-<p>The angular controllers are as light as possible with as little logic as possible, where heavy logic is required directives are used.    </p>
+<p>The front-end architecture consists of three layers of services as seen in the diagram above.The first service is the configuration service and it has only one responsibility, to provide URLs to the exposed methods of the Web API. The second layer consists of the synchronization service that makes the actual calls to the Web API, this services takes the required url from the configuration service, gets the data from the entity services and makes the call to the Web API. The third layer of services consists of multiple entity services, each entity having it's own service thus obeying the single responsibility principle, any processing of the data, that can be done on the front-end is done inside this service and not in the angular controllers or in the other services.
+   The angular controllers are as light as possible with as little logic as possible, where heavy logic is required directives are used.    </p>
 
 <h2>
 <a id="back-end" class="anchor" href="#back-end" aria-hidden="true"><span class="octicon octicon-link"></span></a>Back-end</h2>
 
-<p><img src="https://cuser2015.files.wordpress.com/2015/11/backenddiagram.png" alt="Back-End Architecture">.</p>
+<p><img src="https://cuser2015.files.wordpress.com/2015/11/backenddiagram.png" alt="Back-End Architecture"></p>
 
 <p>The back-end is built around .NET technologies and has four layers.The first layer is represented by the actual database model (internal and external).The second layer is represented by the repositories, the next layer unifies the external and internal data,in here is where the most back-end logic lies as well.The final layer is represented by the WEB API controllers that expose services to the front-end.</p>
 

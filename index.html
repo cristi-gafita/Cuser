@@ -54,9 +54,11 @@
 <li>
 <p><a href="https://msdn.microsoft.com/en-us/data/ef.aspx">Entity Framework</a></p>
 
-<p>The front-end is built in AngularJs using a multi-layered service architecture to be easily maintained and respect best practices.In order to easily implement themes in the application but also because it is a newer alternative than CSS less was chosen.The design of the project was built using the popular framework Bootstrap.
-The back-end is built using Microsoft technologies so the REST Api is implemented using WebApi, also to comunicate with the database Entity Framework was used.
-Taking into account that the project is built using mostly .NET technologies dotNetRDF was the obvious choice in order to easily work with RDF, SPARQL and the Semantic Web.</p>
+<p>The front-end is built in AngularJs using a multi-layered service architecture to be easily maintained and respect best practices.In order to easily implement themes in the application but also because it is a newer alternative than CSS less was chosen.The design of the project was built using the popular framework Bootstrap.</p>
+
+<p>The back-end is built using Microsoft technologies so the REST Api is implemented using WebApi, also to comunicate with the database Entity Framework was used.</p>
+
+<p>Taking into account that the project is built using mostly .NET technologies dotNetRDF was the obvious choice in order to easily work with RDF, SPARQL and the Semantic Web.</p>
 </li>
 </ul>
 
@@ -70,8 +72,9 @@ Taking into account that the project is built using mostly .NET technologies dot
 
 <p><img src="https://cuser2015.files.wordpress.com/2015/11/arhitectura-front-end.png" alt="Front-End Architecture"></p>
 
-<p>The front-end architecture consists of three layers of services as seen in the diagram above.The first service is the configuration service and it has only one responsibility, to provide URLs to the exposed methods of the Web API. The second layer consists of the synchronization service that makes the actual calls to the Web API, this services takes the required url from the configuration service, gets the data from the entity services and makes the call to the Web API. The third layer of services consists of multiple entity services, each entity having it's own service thus obeying the single responsibility principle, any processing of the data, that can be done on the front-end is done inside this service and not in the angular controllers or in the other services.
-   The angular controllers are as light as possible with as little logic as possible, where heavy logic is required directives are used.    </p>
+<p>The front-end architecture consists of three layers of services as seen in the diagram above.The first service is the configuration service and it has only one responsibility, to provide URLs to the exposed methods of the Web API. The second layer consists of the synchronization service that makes the actual calls to the Web API, this services takes the required url from the configuration service, gets the data from the entity services and makes the call to the Web API. The third layer of services consists of multiple entity services, each entity having it's own service thus obeying the single responsibility principle, any processing of the data, that can be done on the front-end is done inside this service and not in the angular controllers or in the other services.</p>
+
+<p>The angular controllers are as light as possible with as little logic as possible, where heavy logic is required directives are used.    </p>
 
 <h2>
 <a id="back-end" class="anchor" href="#back-end" aria-hidden="true"><span class="octicon octicon-link"></span></a>Back-end</h2>

@@ -1,0 +1,509 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "cuser API",
+        "description": "cuser",
+        "version": "1.0.0"
+    },
+    "host": "api.cuser.com",
+    "schemes": [
+        "https"
+    ],
+    "basePath": "/v1",
+    "produces": [
+        "application/json"
+    ],
+    "paths": {
+        "/accout/login": {
+            "post": {
+                "summary": "authenticates the user in the application",
+                "description": "The Login endpoint returns a HttpResponseMessage code 200 Ok if the user is authenticated with success in the application and 401 Unauthorized if the user doesn't have access to the application.\n",
+                "parameters": [
+                    {
+                        "name": "UserLoginModel",
+                        "in": "body",
+                        "description": "contains the username and password for authentication",
+                        "required": true,
+                        "type": "object"
+                    }
+                ],
+                "tags": [
+                    "Account"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User is logged in."
+                    },
+                    "401": {
+                        "description": "User is not authorize to access the application"
+                    }
+                }
+            }
+        },
+        "/accout/logoff": {
+            "post": {
+                "summary": "User is logged out from the application",
+                "description": "The Logoff endpoint returns a HttpResponseMessage code 200 Ok if the user is logged off with success.\n",
+                "tags": [
+                    "Account"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User is logged out."
+                    },
+                    "default": {
+                        "description": "Unexpected error"
+                    }
+                }
+            }
+        },
+        "/accout/register": {
+            "post": {
+                "summary": "creates an account for a user in order to access the application",
+                "description": "The Register endpoint a HttpResponseMessage code 200 Ok if the account for the user that registered in the application is created.\n",
+                "parameters": [
+                    {
+                        "name": "UserRegisterModel",
+                        "in": "body",
+                        "description": "contains the username, email, password, confirm password properties for registration",
+                        "required": true,
+                        "type": "object"
+                    }
+                ],
+                "tags": [
+                    "Account"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "User is registered."
+                    },
+                    "default": {
+                        "description": "Unexpected error"
+                    }
+                }
+            }
+        },
+        "/user/settings": {
+            "get": {
+                "summary": "get the user preferences",
+                "description": "This endpoint returns an object that contains the language and the theme used in the application by a specific user.\n",
+                "parameters": [
+                    {
+                        "name": "UserSettings",
+                        "in": "body",
+                        "description": "user preferences",
+                        "required": true,
+                        "type": "object"
+                    },
+                    {
+                        "name": "Id",
+                        "in": "query",
+                        "description": "user id",
+                        "required": true,
+                        "type": "number",
+                        "format": "int32"
+                    }
+                ],
+                "tags": [
+                    "User"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "object with the user settings",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "404": {
+                        "description": "user not found"
+                    }
+                }
+            },
+            "post": {
+                "summary": "set the user preferences",
+                "description": "This endpoint sets the language and the theme used in the application by a specific user and save the preferences in the database.\n",
+                "parameters": [
+                    {
+                        "name": "UserSettings",
+                        "in": "body",
+                        "description": "user preferences",
+                        "required": true,
+                        "type": "object"
+                    },
+                    {
+                        "name": "Id",
+                        "in": "query",
+                        "description": "user id",
+                        "required": true,
+                        "type": "number",
+                        "format": "int32"
+                    }
+                ],
+                "tags": [
+                    "User"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "preferences saved"
+                    },
+                    "404": {
+                        "description": "user not found"
+                    }
+                }
+            }
+        },
+        "/restaurant/contact": {
+            "get": {
+                "summary": "Restaurant details",
+                "description": "This endpoint returns an array with all the products from the restaurant.",
+                "parameters": [
+                    {
+                        "name": "RestaurantDetails",
+                        "in": "body",
+                        "description": "restaurant details",
+                        "required": true,
+						"type": object
+                    }
+                ],
+                "tags": [
+                    "Restaurant"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "an object with restaurant details",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error"
+                    }
+                }
+            }
+        },
+        "/menu/categories": {
+            "get": {
+                "summary": "Menu categories",
+                "description": "This endpoint returns an array with all the food categories from the restaurant.\n",
+                "tags": [
+                    "Menu"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array of food categories",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/FoodCategory"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error"
+                    }
+                }
+            }
+        },
+        "/menu/category": {
+            "get": {
+                "summary": "Products from one category",
+                "description": "This endpoint returns all the products from the category with a specific id.\n",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "category id",
+                        "required": true,
+                        "type": "number",
+                        "format": "int32"
+                    }
+                ],
+                "tags": [
+                    "Menu"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array with products.",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Product"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error"
+                    }
+                }
+            }
+        },
+        "/menu/products": {
+            "get": {
+                "summary": "all the products from all categories",
+                "description": "This endpoint returns an array all the products from all the categories.\n",
+                "tags": [
+                    "Menu"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "An array with all the products from all categories.",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/Product"
+                            }
+                        }
+                    },
+                    "default": {
+                        "description": "Unexpected error"
+                    }
+                }
+            }
+        },
+        "/menu/product": {
+            "get": {
+                "summary": "Get a product.",
+                "description": "This endpoint returns an object of type Product with a given id.\nThis object contains all the details of a product from the menu.\n",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "product id",
+                        "required": true,
+                        "type": "number",
+                        "format": "int32"
+                    }
+                ],
+                "tags": [
+                    "Menu"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "an object with product details",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "404": {
+                        "description": "product not found"
+                    }
+                }
+            }
+        },
+        "/review/product": {
+            "get": {
+                "summary": "Product review",
+                "description": "This endpoint returns an object of type Review that contains a description of the product written by a customer and a score from 1 to 5 for the product\n",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "product id",
+                        "required": true,
+                        "type": "number",
+                        "format": "int32"
+                    }
+                ],
+                "tags": [
+                    "Menu"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "an object with product review",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "404": {
+                        "description": "product not found"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Product review",
+                "description": "After a client gives a review for a product, this endpoint receives the Review object and save it in the database.\n",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "product id",
+                        "required": true,
+                        "type": "number",
+                        "format": "int32"
+                    },
+                    {
+                        "name": "Review",
+                        "in": "body",
+                        "description": "Review of the product",
+                        "required": true,
+                        "type": "object"
+                    }
+                ],
+                "tags": [
+                    "Menu"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "an object with product review",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "404": {
+                        "description": "product not found"
+                    },
+                    "default": {
+                        "description": "unexpected error"
+                    }
+                }
+            }
+        },
+        "/user/recommendations": {
+            "get": {
+                "summary": "Product review",
+                "description": "This endpoint will return recommendations for an user depending on his informations from Facebook, his gastronomical tastes or feedback.\n",
+                "parameters": [
+                    {
+                        "name": "id",
+                        "in": "query",
+                        "description": "user id",
+                        "required": true,
+                        "type": "number",
+                        "format": "int32"
+                    }
+                ],
+                "tags": [
+                    "Recommendations"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "an array with recommendations",
+                        "schema": {
+                            "type": "object"
+                        }
+                    },
+                    "404": {
+                        "description": "product not found"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "UserLoginModel": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                }
+            }
+        },
+        "UserRegisterModel": {
+            "type": "object",
+            "properties": {
+                "username": {
+                    "type": "string"
+                },
+                "password": {
+                    "type": "string"
+                },
+                "confirmpassword": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                }
+            }
+        },
+        "UserSettings": {
+            "type": "object",
+            "properties": {
+                "language": {
+                    "type": "string"
+                },
+                "theme": {
+                    "type": "string"
+                }
+            }
+        },
+        "RestaurantDetails": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "number"
+                },
+                "address": {
+                    "type": "string"
+                }
+            }
+        },
+        "FoodCategory": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "Product": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "number"
+                },
+                "ingredients": {
+                    "type": "array"
+                }
+            }
+        },
+        "Ingredient": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number"
+                },
+                "name": {
+                    "type": "string"
+                }
+            }
+        },
+        "Review": {
+            "type": "object",
+            "properties": {
+                "id": {
+                    "type": "number"
+                },
+                "message": {
+                    "type": "string"
+                },
+                "score": {
+                    "type": "number"
+                },
+                "itemReviewed": {
+                    "type": "number"
+                },
+                "itemType": {
+                    "type": "number"
+                }
+            }
+        }
+    }
+}

@@ -24,7 +24,9 @@
                         "in": "body",
                         "description": "contains the username and password for authentication",
                         "required": true,
-                        "type": "object"
+                        "schema": {
+                          "$ref": "#/definitions/UserLoginModel"
+                          }
                     }
                 ],
                 "tags": [
@@ -67,7 +69,9 @@
                         "in": "body",
                         "description": "contains the username, email, password, confirm password properties for registration",
                         "required": true,
-                        "type": "object"
+                        "schema": {
+                          "$ref": "#/definitions/UserRegisterModel"
+                          }
                     }
                 ],
                 "tags": [
@@ -93,7 +97,9 @@
                         "in": "body",
                         "description": "user preferences",
                         "required": true,
-                        "type": "object"
+                        "schema": {
+                          "$ref": "#/definitions/UserSettings"
+                          }
                     },
                     {
                         "name": "Id",
@@ -128,7 +134,9 @@
                         "in": "body",
                         "description": "user preferences",
                         "required": true,
-                        "type": "object"
+                        "schema": {
+                          "$ref": "#/definitions/UserSettings"
+                          }
                     },
                     {
                         "name": "Id",
@@ -162,7 +170,9 @@
                         "in": "body",
                         "description": "restaurant details",
                         "required": true,
-						"type": object
+						            "schema": {
+                          "$ref": "#/definitions/RestaurantDetails"
+                          }
                     }
                 ],
                 "tags": [
@@ -311,8 +321,8 @@
                     "200": {
                         "description": "an object with product review",
                         "schema": {
-                            "type": "object"
-                        }
+                          "$ref": "#/definitions/Review"
+                          }
                     },
                     "404": {
                         "description": "product not found"
@@ -336,7 +346,9 @@
                         "in": "body",
                         "description": "Review of the product",
                         "required": true,
-                        "type": "object"
+                        "schema": {
+                          "$ref": "#/definitions/Review"
+                          }
                     }
                 ],
                 "tags": [
@@ -344,10 +356,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "an object with product review",
-                        "schema": {
-                            "type": "object"
-                        }
+                        "description": "product review saved"
                     },
                     "404": {
                         "description": "product not found"
@@ -377,10 +386,7 @@
                 ],
                 "responses": {
                     "200": {
-                        "description": "an array with recommendations",
-                        "schema": {
-                            "type": "object"
-                        }
+                        "description": "an array with recommendations"
                     },
                     "404": {
                         "description": "product not found"

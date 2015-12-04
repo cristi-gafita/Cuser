@@ -163,7 +163,7 @@
         "/restaurant/contact": {
             "get": {
                 "summary": "Restaurant details",
-                "description": "This endpoint returns an array with all the products from the restaurant.",
+                "description": "This endpoint returns an object with restaurant details.",
                 "parameters": [
                     {
                         "name": "RestaurantDetails",
@@ -331,7 +331,7 @@
             },
             "post": {
                 "summary": "Product review",
-                "description": "After a client gives a review for a product, this endpoint receives the Review object and save it in the database.\n",
+                "description": "After a client gives a review for a product, this endpoint receives the Review object and saves it in the database.\n",
                 "parameters": [
                     {
                         "name": "id",

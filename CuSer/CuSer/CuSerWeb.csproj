@@ -114,7 +114,6 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Content\less\" />
-    <Folder Include="Content\services\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -162,6 +161,10 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\controllers\homeCtrl.js" />
+    <Content Include="Content\services\configurationService.js" />
+    <Content Include="Content\services\foodService.js" />
+    <Content Include="Content\services\reviewsService.js" />
+    <Content Include="Content\services\syncService.js" />
     <Content Include="Content\views\homeView.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />

@@ -3,3 +3,8 @@ C:\Users\CGAFITA\Desktop\CuSer\CuSer.Logic\bin\Debug\CuSer.Logic.pdb
 C:\Users\CGAFITA\Desktop\CuSer\CuSer.Logic\obj\Debug\CuSer.Logic.csprojResolveAssemblyReference.cache
 C:\Users\CGAFITA\Desktop\CuSer\CuSer.Logic\obj\Debug\CuSer.Logic.dll
 C:\Users\CGAFITA\Desktop\CuSer\CuSer.Logic\obj\Debug\CuSer.Logic.pdb
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer.Logic\bin\Debug\CuSer.Logic.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer.Logic\bin\Debug\CuSer.Logic.pdb
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer.Logic\obj\Debug\CuSer.Logic.csprojResolveAssemblyReference.cache
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer.Logic\obj\Debug\CuSer.Logic.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer.Logic\obj\Debug\CuSer.Logic.pdb

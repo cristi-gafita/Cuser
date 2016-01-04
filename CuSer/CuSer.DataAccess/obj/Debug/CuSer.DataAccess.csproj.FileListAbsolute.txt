@@ -1,0 +1,5 @@
+C:\Users\CGAFITA\Desktop\CuSer\CuSer.DataAccess\bin\Debug\CuSer.DataAccess.dll
+C:\Users\CGAFITA\Desktop\CuSer\CuSer.DataAccess\bin\Debug\CuSer.DataAccess.pdb
+C:\Users\CGAFITA\Desktop\CuSer\CuSer.DataAccess\obj\Debug\CuSer.DataAccess.csprojResolveAssemblyReference.cache
+C:\Users\CGAFITA\Desktop\CuSer\CuSer.DataAccess\obj\Debug\CuSer.DataAccess.dll
+C:\Users\CGAFITA\Desktop\CuSer\CuSer.DataAccess\obj\Debug\CuSer.DataAccess.pdb

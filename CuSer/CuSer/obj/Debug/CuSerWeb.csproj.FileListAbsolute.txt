@@ -30,3 +30,35 @@ C:\Users\CGAFITA\Desktop\CuSer\CuSer\bin\Antlr3.Runtime.pdb
 C:\Users\CGAFITA\Desktop\CuSer\CuSer\obj\Debug\CuSerWeb.csprojResolveAssemblyReference.cache
 C:\Users\CGAFITA\Desktop\CuSer\CuSer\obj\Debug\CuSer.dll
 C:\Users\CGAFITA\Desktop\CuSer\CuSer\obj\Debug\CuSer.pdb
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\CuSer.dll.config
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\CuSer.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\CuSer.pdb
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\Antlr3.Runtime.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\Microsoft.Web.Infrastructure.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\Newtonsoft.Json.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Net.Http.Formatting.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.Helpers.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.Http.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.Http.WebHost.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.Mvc.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.Optimization.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.Razor.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.WebPages.Deployment.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.WebPages.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.WebPages.Razor.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\WebGrease.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\Newtonsoft.Json.xml
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Net.Http.Formatting.xml
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.Helpers.xml
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.Http.xml
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.Http.WebHost.xml
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.Mvc.xml
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.Optimization.xml
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.Razor.xml
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.WebPages.xml
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.WebPages.Deployment.xml
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\System.Web.WebPages.Razor.xml
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\bin\Antlr3.Runtime.pdb
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\obj\Debug\CuSerWeb.csprojResolveAssemblyReference.cache
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\obj\Debug\CuSer.dll
+F:\Wade PLM\Proiectul\Cuser\CuSer\CuSer\obj\Debug\CuSer.pdb

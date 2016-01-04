@@ -113,8 +113,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\less\" />
-    <Folder Include="Content\services\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -162,7 +160,20 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\controllers\homeCtrl.js" />
+    <Content Include="Content\css\layout.css" />
+    <Content Include="Content\less\layout.css">
+      <DependentUpon>layout.less</DependentUpon>
+    </Content>
+    <Content Include="Content\less\layout.min.css">
+      <DependentUpon>layout.css</DependentUpon>
+    </Content>
+    <Content Include="Content\services\configurationService.js" />
+    <Content Include="Content\services\syncService.js" />
+    <Content Include="Content\views\contactView.html" />
     <Content Include="Content\views\homeView.html" />
+    <Content Include="Content\views\menuView.html" />
+    <Content Include="Content\views\peopleView.html" />
+    <Content Include="Content\views\recommendationView.html" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -226,6 +237,13 @@
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
+    <Content Include="Content\less\layout.less" />
+    <Content Include="Content\less\layout.css.map">
+      <DependentUpon>layout.css</DependentUpon>
+    </Content>
+    <Content Include="Content\css\layout.css.map">
+      <DependentUpon>layout.css</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />

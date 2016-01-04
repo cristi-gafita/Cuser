@@ -1,0 +1,31 @@
+﻿.menu-button {
+  float: left !important;
+  margin-left: 5px;
+  border: none !important;
+  background: none !important;
+}
+#top-bar {
+  background-color: #1E90FF;
+  color: #fff !important;
+  padding-left: 15%;
+  padding-right: 15%;
+}
+#top-bar .icon-bar {
+  background-color: #fff;
+}
+#top-bar a {
+  color: #fff;
+}
+#top-bar a:hover {
+  background-color: #b0b0b0;
+}
+#top-bar li a.active {
+  background-color: #404040 !important;
+}
+#menu-list {
+  color: #fff;
+}
+.container {
+  background-color: red;
+}
+/*# sourceMappingURL=layout.css.map */

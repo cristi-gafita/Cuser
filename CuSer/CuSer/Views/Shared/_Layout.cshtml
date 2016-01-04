@@ -3,6 +3,9 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
+    <link href="//fonts.googleapis.com/css?family=Roboto:300,400,300italic,400italic" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <link href="~/Content/css/layout.css" rel="stylesheet" />
     <title>@ViewBag.Title</title>
     @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
@@ -18,26 +21,52 @@
     <script src="~/Content/controllers/homeCtrl.js"></script>
 
     <!--Directives-->
-    
+
 
 
 
 </head>
 <body ng-app="CuserApp">
 
-
+    <div>
+        <nav class="navbar navbar-default navbar-fixed-top" id="top-bar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed menu-button"
+                            data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false"
+                            ng-init="navCollapsed = true" ng-click="navCollapsed = !navCollapsed">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <img />
+                    <a class="navbar-brand" ui-sref="home">CuSer</a>
+                </div>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar-collapse" ng-class="{'in':!navCollapsed}">
+                <ul class="nav navbar-nav" id="menu-list">
+                    <li><a ui-sref="menu">Menu</a></li>
+                    <li><a ui-sref="recommendation">Recommendation</a></li>
+                    <li><a ui-sref="people">People</a></li>
+                    <li><a ui-sref="contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)
 
 
+    <div class="container">
+        <div ui-view>
 
-    <div ui-view>
+            <!-- HERE GOES INJECTED DIVS-->
 
-        <!-- HERE GOES INJECTED DIVS-->
-
+        </div>
     </div>
 
-@RenderBody()
+    @RenderBody()
 </body>
 </html>

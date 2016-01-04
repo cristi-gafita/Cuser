@@ -2,8 +2,8 @@
   "BrowserLink": {
     "CssIgnorePatterns": "bootstrap*; reset.css; normalize.css; jquery*; toastr*; foundation*; animate*; inuit*; elements*; ratchet*; hint*; flat-ui*; 960*; skeleton*",
     "EnableMenu": true,
-    "EnablePixelPushing": true,
-    "ShowMenu": true
+    "EnablePixelPushing": false,
+    "ShowMenu": false
   },
   "CodeGen": {
     "AddTypeScriptReferencePath": true,
@@ -26,7 +26,7 @@
   },
   "Css": {
     "AdjustRelativePaths": true,
-    "AutoMinify": true,
+    "AutoMinify": false,
     "Autoprefix": false,
     "AutoprefixerBrowsers": null,
     "GenerateRtlSourceMaps": true,
@@ -66,7 +66,6 @@
     "EnableBootstrapValidation": true,
     "EnableEnterFormat": true,
     "EnableFoundationValidation": true,
-    "EnableMicrodataValidation": true,
     "GzipMinifiedFiles": false,
     "ImageDropFormats": [
       {
@@ -109,15 +108,14 @@
     "TermSemicolons": true
   },
   "Less": {
-    "AdjustRelativePaths": true,
-    "CompileOnBuild": false,
+    "CompileOnBuild": true,
     "CompileOnSave": true,
     "EnableChainCompilation": true,
     "GenerateSourceMaps": true,
     "MinifyInPlace": false,
-    "OutputDirectory": null,
-    "ProcessSourceMapsForEditorEnhancements": true,
-    "ShowPreviewPane": true,
+    "OutputDirectory": "../css/",
+    "ProcessSourceMapsForEditorEnhancements": false,
+    "ShowPreviewPane": false,
     "StrictMath": false
   },
   "LiveScript": {
@@ -131,12 +129,17 @@
     "WrapClosure": true
   },
   "Markdown": {
+    "AutoHyperlink": false,
+    "AutoNewLines": false,
     "CompileOnBuild": false,
     "CompileOnSave": true,
-    "GlobalPreviewCSSFile": null,
+    "EncodeProblemUrlCharacters": false,
+    "GenerateXHTML": true,
+    "LinkEmails": false,
     "MinifyInPlace": false,
     "OutputDirectory": null,
-    "ShowPreviewPane": true
+    "ShowPreviewPane": true,
+    "StrictBoldItalic": false
   },
   "Scss": {
     "CompileOnBuild": false,

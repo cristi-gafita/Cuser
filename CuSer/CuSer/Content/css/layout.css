@@ -22,7 +22,7 @@
 #top-bar li a.active {
   background-color: #404040 !important;
 }
-#menu-list {
+.menu-list {
   color: #fff;
 }
 .container {

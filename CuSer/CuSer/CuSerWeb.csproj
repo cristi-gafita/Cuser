@@ -156,11 +156,43 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\HelpPage\HelpPage.css" />
+    <Content Include="bin\Antlr3.Runtime.dll" />
+    <Content Include="bin\Antlr3.Runtime.pdb" />
+    <Content Include="bin\CuSer.dll" />
+    <Content Include="bin\CuSer.pdb" />
+    <Content Include="bin\Microsoft.Web.Infrastructure.dll" />
+    <Content Include="bin\Newtonsoft.Json.dll" />
+    <Content Include="bin\Newtonsoft.Json.xml" />
+    <Content Include="bin\System.Net.Http.Formatting.dll" />
+    <Content Include="bin\System.Net.Http.Formatting.xml" />
+    <Content Include="bin\System.Web.Helpers.dll" />
+    <Content Include="bin\System.Web.Helpers.xml" />
+    <Content Include="bin\System.Web.Http.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.dll" />
+    <Content Include="bin\System.Web.Http.WebHost.xml" />
+    <Content Include="bin\System.Web.Http.xml" />
+    <Content Include="bin\System.Web.Mvc.dll" />
+    <Content Include="bin\System.Web.Mvc.xml" />
+    <Content Include="bin\System.Web.Optimization.dll" />
+    <Content Include="bin\System.Web.Optimization.xml" />
+    <Content Include="bin\System.Web.Razor.dll" />
+    <Content Include="bin\System.Web.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.Deployment.dll" />
+    <Content Include="bin\System.Web.WebPages.Deployment.xml" />
+    <Content Include="bin\System.Web.WebPages.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.dll" />
+    <Content Include="bin\System.Web.WebPages.Razor.xml" />
+    <Content Include="bin\System.Web.WebPages.xml" />
+    <Content Include="bin\WebGrease.dll" />
     <Content Include="Content\app.js" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\controllers\homeCtrl.js" />
     <Content Include="Content\css\layout.css" />
+    <Content Include="Content\images\dessert-menu.jpg" />
+    <Content Include="Content\images\pizza-menu.jpg" />
+    <Content Include="Content\images\salad-menu.jpg" />
+    <Content Include="Content\images\soup-menu.jpg" />
     <Content Include="Content\less\layout.css">
       <DependentUpon>layout.less</DependentUpon>
     </Content>
@@ -173,6 +205,7 @@
     <Content Include="Content\services\syncService.js" />
     <Content Include="Content\views\contactView.html" />
     <Content Include="Content\views\homeView.html" />
+    <Content Include="Content\views\logInView.html" />
     <Content Include="Content\views\menuView.html" />
     <Content Include="Content\views\peopleView.html" />
     <Content Include="Content\views\recommendationView.html" />
@@ -246,6 +279,7 @@
     <Content Include="Content\css\layout.css.map">
       <DependentUpon>layout.css</DependentUpon>
     </Content>
+    <Content Include="bin\CuSer.dll.config" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />

@@ -168,6 +168,8 @@
       <DependentUpon>layout.css</DependentUpon>
     </Content>
     <Content Include="Content\services\configurationService.js" />
+    <Content Include="Content\services\foodService.js" />
+    <Content Include="Content\services\reviewsService.js" />
     <Content Include="Content\services\syncService.js" />
     <Content Include="Content\views\contactView.html" />
     <Content Include="Content\views\homeView.html" />

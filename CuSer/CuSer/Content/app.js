@@ -32,6 +32,11 @@
                     url: "/contact",
                     templateUrl: "Content/views/contactView.html",
                     controller: "contactCtrl as vm"
+                })
+                .state("logIn", {
+                    url: "/logIn",
+                    templateUrl: "Content/views/logInView.html",
+                    controller:"logInCtrl as vm"
                 });
         }]);
 
